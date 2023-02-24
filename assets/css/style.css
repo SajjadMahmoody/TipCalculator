@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 77vh;
+}
+
+.heading {
+  color: hsl(183, 100%, 15%);
+  width: min(100px, 100%);
+  line-height: 30px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.2;
+  margin-top: 5vh;
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+}
+
+.box {
+  padding: 2rem;
+  width: min(700px, 100%);
+  height: min(400px, 100%);
+  background-color: white;
+  border-radius: 14px;
+  font-size: 1rem;
+}
+
+.label-title {
+  color: hsl(186, 14%, 43%);
+  display: block;
+  font-size: 13px;
+  margin-bottom: 0.4rem;
+}
+
+.number-input {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 4px;
+  color: hsl(183, 100%, 15%);
+  border: none;
+  outline: 0px solid white !important;
+  transition: all 0.1s ease-in-out;
+  direction: rtl !important;
+  padding-right: 10px;
+}
+
+.number-input ~ img {
+  position: absolute;
+  left: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.number-input:focus {
+  outline: 2px solid hsl(172, 67%, 45%) !important;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]:checked ~ label {
+  cursor: pointer;
+  background-color: hsl(172, 67%, 45%);
+}
+
+.discount-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+
+.radio-label {
+  background-color: hsl(183, 100%, 15%);
+  width: 94px;
+  padding-block: 0.5rem;
+  border-radius: 2px;
+  margin-bottom: 0.7rem;
+  border-radius: 0.4rem;
+  text-align: center;
+  color: white;
+}
+
+.radio-label:hover {
+  background-color: hsl(185, 41%, 84%);
+  cursor: pointer;
+  color: hsl(183, 100%, 15%);
+}
+
+.box-clac {
+  background-color: hsl(183, 100%, 15%);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.title-tip {
+  margin-bottom: 0 !important;
+}
+
+.title-tip + p {
+  font-size: 12px;
+  color: hsl(186, 14%, 43%);
+}
+
+.number-clac {
+  color: hsl(172, 67%, 45%);
+}
+
+.btn-reset {
+  width: 100%;
+  background-color: hsl(172, 67%, 45%);
+  opacity: 0.3;
+  border: none;
+  padding: 0.5rem;
+  color: hsl(183, 100%, 15%);
+  border-radius: 3px;
+  margin-top: 120px;
+  text-transform: uppercase;
+}
+
+.btn-reset:hover {
+  opacity: 1;
+  background-color: hsl(185, 41%, 84%);
+  cursor: pointer;
+  color: hsl(183, 100%, 15%);
+}
+
+@media screen and (max-width: 768px) {
+  .btn-reset {
+    margin-top: 0;
+  }
+  .heading {
+    margin-bottom: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */

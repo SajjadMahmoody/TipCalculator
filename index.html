@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>TipCalculator</title>
+</head>
+
+<body>
+
+    <h3 class="heading">SPLI TTER</h3>
+
+    <div class="container">
+
+        <div class="box">
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="clacForm">
+                        <div>
+                            <div class="position-relative">
+                            <label class="label-title" for="Bill">Bill</label>
+                                <input type=" text" class="number-input" id="numberBill" placeholder="0">
+                                <img src="./assets/media/images/icon-dollar.svg" >
+                            </div>
+                        </div>
+                        <div>
+                            <label class="label-title">Select Tip %</label>
+                            <div class="discount-btn">
+                                <div>
+                                    <span>
+                                        <input type="radio" id="descount-5" name="tip" id="tip" value="5" />
+                                        <label class="radio-label" for="descount-5">5%</label>
+
+                                    </span>
+                                    <span>
+                                        <input type="radio" id="descount-10" name="tip" value="10" />
+                                        <label class="radio-label" for="descount-10">10%</label>
+
+                                    </span>
+                                    <span>
+                                        <input type="radio" id="descount-15" name="tip" id="tip" value="15" />
+                                        <label class="radio-label" for="descount-15">15%</label>
+                                    </span>
+
+                                    <span>
+                                        <input type="radio" id="descount-25" name="tip" id="tip" value="25" />
+                                        <label class="radio-label" for="descount-25">25%</label>
+                                    </span>
+                                    <span>
+                                        <input type="radio" id="descount-50" name="tip" id="tip" value="50" />
+                                        <label class="radio-label" for="descount-50">50%</label>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+
+                                    <label class="label-title" for="numberofpeople">Number of People</label>
+                                    <label class="label-title text-danger" id="checkZero">can't be zero</label>
+                                </div>
+                                <div class="position-relative">
+                                    <input type=" text" class="number-input" id="numberPeople" placeholder="0">
+                                    <img src="./assets/media/images/icon-person.svg">
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="box-clac">
+                        <div class="d-flex justify-content-between">
+                            <span>
+                                <p class="title-tip">Tip Amount</p>
+                                <p>/ person</p>
+                            </span>
+                            <span>
+                                <h2 class="number-clac" id="tipAmount">$0.00</h2>
+                            </span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>
+                                <p class="title-tip" >Total</p>
+                                <p>/ person</p>
+                            </span>
+                            <span>
+                                <h2 class="number-clac" id="tipTotal">$0.00</h2>
+                            </span>
+                        </div>
+                        <div>
+                            <button class="btn-reset" >Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
