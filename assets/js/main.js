@@ -1,4 +1,4 @@
-$("#numberPeople").keydown(function (e) {
+$("#numberPeople").on("input", function (e) {
     let result = $("input[type='radio']:checked");
     let radioval = 0;
     let price = parseInt($("#numberBill").val());
@@ -10,9 +10,14 @@ $("#numberPeople").keydown(function (e) {
         radioval = parseFloat(result.val());
         let total = float * (radioval / 100);
         $("#tipAmount").html("$" + total.toFixed(2));
-
     } else {
         radioval = 0;
+
+    }
+
+    if ($("#tipTotal").text() == "$NaN" || $("#tipAmount").text() == "$NaN") {
+        $("#tipAmount").text("$0.00");
+        $("#tipTotal").text("$0.00");
 
     }
 })
@@ -20,8 +25,11 @@ $("#numberPeople").keydown(function (e) {
 
 $('#numberPeople').on('input', function () {
     let value = $(this).val();
-    if (value == "" || value == 0) {
+    if (value == "" || value == "0" || +value == 0) {
         $("#checkZero").removeClass("d-none");
+        $("#tipAmount").text("$0.00");
+        $("#tipTotal").text("$0.00");
+
 
     } else {
         $("#checkZero").addClass("d-none");
