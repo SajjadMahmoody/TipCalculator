@@ -20,23 +20,17 @@ $("#numberPeople").on("input", function (e) {
         $("#tipTotal").text("$0.00");
 
     }
-})
-
-
-$('#numberPeople').on('input', function () {
-    let value1 = $("#numberBill").val();
-    let value2 = $("#numberPeople").val();
-    if (+value2 == 0 || value2 == "0" || value2 == "" || +value2 > 0) {
+    if ($("#numberPeople").val() == 0 || $("#numberPeople").val() == "0") {
+        $("#checkZero").text("can't be zero|empty");
         $("#checkZero").removeClass("d-none");
         $("#tipAmount").text("$0.00");
         $("#tipTotal").text("$0.00");
-
-
     }
     else {
         $("#checkZero").addClass("d-none");
     }
-});
+
+})
 
 $(".btn-reset").click(function () {
     $("#numberBill").val("");
