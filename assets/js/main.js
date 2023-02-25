@@ -24,14 +24,16 @@ $("#numberPeople").on("input", function (e) {
 
 
 $('#numberPeople').on('input', function () {
-    let value = $(this).val();
-    if (value == "" || value == "0" || +value == 0) {
+    let value1 = $("#numberBill").val();
+    let value2 = $("#numberPeople").val();
+    if (+value2 == 0 || value2 == "0" || value2 == "" || +value2 > 0) {
         $("#checkZero").removeClass("d-none");
         $("#tipAmount").text("$0.00");
         $("#tipTotal").text("$0.00");
 
 
-    } else {
+    }
+    else {
         $("#checkZero").addClass("d-none");
     }
 });
