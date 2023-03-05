@@ -1,4 +1,4 @@
-$("#numberPeople").on("input", function (e) {
+function def() {
     let result = $("input[type='radio']:checked");
     let radioval = 0;
     let price = parseInt($("#numberBill").val());
@@ -20,21 +20,49 @@ $("#numberPeople").on("input", function (e) {
         $("#tipTotal").text("$0.00");
 
     }
-    if ($("#numberPeople").val() == 0 || $("#numberPeople").val() == "0") {
+
+}
+
+$("#numberPeople").on("input", function () {
+    if (parseInt($("#numberPeople").val()) > 0) {
+        def();
+        $("#checkZero").addClass("d-none");
+
+    }
+    else {
         $("#checkZero").text("can't be zero|empty");
         $("#checkZero").removeClass("d-none");
         $("#tipAmount").text("$0.00");
         $("#tipTotal").text("$0.00");
-    }
-    else {
-        $("#checkZero").addClass("d-none");
+        $("#numberPeople").val("");
     }
 
+
+
+});
+$("#numberBill").on("input", function () {
+    if (parseInt($("#numberBill").val()) > 0) {
+        def();
+    }
+    else {
+        $("#numberBill").val("");
+
+    }
+});
+$("#clacForm").submit(function (e) {
+    e.preventDefault();
+    def();
+});
+$("input[type='radio']").on("change", function () {
+    def();
 })
 
 $(".btn-reset").click(function () {
     $("#numberBill").val("");
     $("#numberPeople").val("");
+    $("input[type='radio']:checked").each(function (i) {
+        this.checked = false;
+    });
     $("#tipAmount").html("$0.00");
     $("#tipTotal").html("$0.00");
 })
